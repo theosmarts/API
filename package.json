@@ -1,0 +1,45 @@
+{
+  "name": "digital-fleild-application",
+  "version": "1.0.0",
+  "description": "DFA system",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist -s",
+    "clean": "rm -rf dist && mkdir dist",
+    "start": "node dist/server.js",
+    "start:dev": "nodemon --exec babel-node src/server.js",
+    "test": "jest --no-cache --detectOpenHandles --runInBand --forceExit",
+    "coverage": "jest --coverage --runInBand --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "coverage": "^0.4.1",
+    "coveralls": "^3.0.9",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "mssql": "^6.0.1",
+    "nodemon": "^2.0.1",
+    "pg": "^7.14.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.2",
+    "sequelize-cli": "^5.5.1",
+    "tedious": "^6.6.2",
+    "uuid": "^3.3.3"
+  }
+}
